@@ -1,0 +1,12 @@
+{
+  "css.validate": false,
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.fixAll",
+    "source.organizeImports"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "git.enableCommitSigning": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
