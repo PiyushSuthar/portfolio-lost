@@ -1,3 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    110.17deg,
+    rgba(31, 41, 55, 0.98) 0.57%,
+    rgba(8, 18, 32, 0.98) 100%
+  );
+}
