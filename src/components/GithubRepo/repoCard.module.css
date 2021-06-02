@@ -1,0 +1,29 @@
+.link {
+  color: #fff;
+  max-width: 50%;
+  text-decoration: none;
+  margin: 10px;
+}
+.container {
+  background-color: #242f3e;
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+.container h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.container p {
+  font-size: 15px;
+}
+.stats {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.icon {
+  width: 15px;
+  margin-right: 15px;
+}

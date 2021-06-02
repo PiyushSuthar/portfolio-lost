@@ -5,11 +5,8 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background: linear-gradient(
-    110.17deg,
-    rgba(31, 41, 55, 0.98) 0.57%,
-    rgba(8, 18, 32, 0.98) 100%
-  );
+  position: relative;
+  overflow: hidden;
 }
 .name {
   background-color: #39a8e5;
@@ -39,10 +36,10 @@
   right: -10px;
 }
 .circle3 {
-  bottom: -100px;
+  bottom: -160px;
   left: -10px;
 }
 .circle4 {
-  bottom: 0px;
+  bottom: -60px;
   left: -120px;
 }
