@@ -2,6 +2,8 @@ import GradientText from "components/GradientText";
 import React from "react";
 import styles from "./TiltedContainer.module.css";
 
+// It's no more a tilted container :(
+
 interface Props {
   heading: string;
   subheading: string;
@@ -22,6 +24,7 @@ const TiltedContainer: React.FC<Props> = ({
           style={
             {
               "--direction": row ? "row" : "column",
+              "--align": row ? "center" : "",
             } as any
           }
         >

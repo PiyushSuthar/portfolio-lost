@@ -1,14 +1,15 @@
 .container {
   background-color: #1f2937;
+  padding: 10px;
   min-height: 200px;
   display: flex;
   margin-top: 40px;
-  transform: rotate(-4deg);
+  /* transform: rotate(-4deg); */
   color: white;
 }
 
 .inner_container {
-  transform: rotate(4deg);
+  /* transform: rotate(4deg); */
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -19,6 +20,7 @@
   display: flex;
   flex-direction: var(--direction);
   justify-content: space-between;
+  align-items: var(--align);
 }
 .heading_h3 {
   font-weight: 600;

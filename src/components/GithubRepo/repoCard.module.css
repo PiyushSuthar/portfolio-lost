@@ -1,6 +1,6 @@
 .link {
   color: #fff;
-  max-width: 50%;
+  max-width: 45%;
   text-decoration: none;
   margin: 10px;
 }
@@ -8,6 +8,12 @@
   background-color: #242f3e;
   padding: 20px 30px;
   border-radius: 8px;
+  transition: 0.3s transform ease;
+}
+.container:hover {
+  background-color: rgb(49, 64, 85);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
 }
 .container h4 {
   font-style: normal;

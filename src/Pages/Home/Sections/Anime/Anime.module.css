@@ -1,0 +1,15 @@
+.anime_stats {
+  display: flex;
+  flex-direction: row;
+}
+
+.stat {
+  margin-right: 20px;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.stat span {
+  font-size: 36px;
+  font-weight: 600;
+}

@@ -8,6 +8,7 @@
   padding: 10px 30px;
   transition: 0.2s ease all;
   font-size: 18px;
+  cursor: pointer;
 }
 .button:active {
   transform: scale(0.9);
