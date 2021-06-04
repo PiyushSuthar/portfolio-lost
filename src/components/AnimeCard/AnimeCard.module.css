@@ -1,0 +1,79 @@
+.link_container {
+  max-width: 250px;
+  margin: 15px;
+  transition: 0.2s all ease;
+}
+
+.link_container:hover {
+  transform: scale(1.02);
+}
+
+.link_container:hover p {
+  transform: scale(0.9);
+}
+.container {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.container .card_text {
+  font-weight: 500;
+  font-size: 17px;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.container p {
+  transition: 0.2s ease all;
+}
+
+.image {
+  position: relative;
+}
+.coverImage {
+  border-radius: 8px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, #141e2c -8.5%, rgba(0, 0, 0, 0) 60.47%);
+  border-radius: 8px;
+}
+
+.genres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-top: 5px;
+  transition: 0.3s all ease;
+}
+.genre {
+  padding: 2px 5px;
+  background-color: rgba(255, 255, 255, 0.281);
+  margin: 1px;
+  border-radius: 4px;
+}
+.link_container:hover .genres {
+  display: flex;
+  animation: SlideUp 0.3s ease-in;
+}
+
+@keyframes SlideUp {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

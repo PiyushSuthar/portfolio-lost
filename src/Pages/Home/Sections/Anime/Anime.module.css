@@ -13,3 +13,21 @@
   font-size: 36px;
   font-weight: 600;
 }
+
+.fav_animes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.fav_animes_container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
