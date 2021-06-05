@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { IRepo } from "Pages/Home/Sections/Projects/data";
 import React from "react";
 import ForkIcon from "./git-merge.svg";
@@ -12,11 +13,19 @@ const RepoCard: React.FC<IRepo> = ({
   link,
 }) => {
   return (
-    <a
+    <motion.a
       className={styles.link}
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      variants={{
+        visible: {
+          scale: 1,
+        },
+        hidden: {
+          scale: 0,
+        },
+      }}
     >
       <div className={styles.container}>
         <h4>{repo}</h4>
@@ -30,7 +39,7 @@ const RepoCard: React.FC<IRepo> = ({
           </p>
         </div>
       </div>
-    </a>
+    </motion.a>
   );
 };
 

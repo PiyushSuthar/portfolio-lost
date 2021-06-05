@@ -2,13 +2,14 @@ import AnimeCard from "components/AnimeCard";
 import Button from "components/Button";
 import GradientText from "components/GradientText";
 import TiltedContainer from "components/TiltedContainer";
+import { motion, useCycle } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import styles from "./Anime.module.css";
 import { getAnimeData, IAnimeData } from "./data";
 
 const AnimeSection = () => {
   const [animeData, setAnimeData] = useState<IAnimeData | null>(null);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useCycle(false, true);
 
   useEffect(() => {
     getAnimeData().then((data) => {
@@ -37,6 +38,17 @@ const AnimeSection = () => {
     </div>
   );
 
+  const MotionAnimeCard = motion(AnimeCard);
+
+  const card = {
+    visible: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    },
+    hidden: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
   const Favourites = () => (
     <div className={styles.fav_animes_container}>
       <h4
@@ -48,20 +60,25 @@ const AnimeSection = () => {
       >
         Favourites
       </h4>
-      <div className={styles.fav_animes}>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={card}
+        className={styles.fav_animes}
+      >
         {animeData.data.User.favourites.anime.nodes
           .slice(
             0,
             showAll ? animeData.data.User.favourites.anime.nodes.length : 4
           )
           .map((anime) => (
-            <AnimeCard key={anime.idMal} {...anime} />
+            <MotionAnimeCard key={anime.idMal} {...anime} />
           ))}
-      </div>
+      </motion.div>
       <div className={styles.button_container}>
         <Button
           onClick={() => {
-            setShowAll((prev) => !prev);
+            setShowAll();
           }}
         >
           Show {showAll ? "less" : "More"}
